@@ -2,6 +2,7 @@
 
 This project focuses on cleaning large quantities of data using **PySpark** to partition it. This is an essential task in every Data Science project as it not only improves the model performance, but it also helps on understanding variables and their reliability.
 
+<!--
 - Calcular precios de casas
 - Tengo mucha información, como el número de garajes, si tiene piscina y juraría que hasta si tiene chimenea
 - Problema:
@@ -9,6 +10,7 @@ This project focuses on cleaning large quantities of data using **PySpark** to p
   - Muchas categorías -> PCA
   - Muchos casos -> particionar
 - Medimos en Kaggle el rendimiento para comparar
+-->
 ---
 
 ## 📂 Dataset
