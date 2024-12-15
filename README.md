@@ -1,16 +1,7 @@
-# 🧠 **Cleaning House Price Data in PySpark**
+# 🧹 **Cleaning House Price Data in PySpark** 🏠
 
 This project focuses on cleaning large quantities of data using **PySpark** to partition it. This is an essential task in every Data Science project as it not only improves the model performance, but it also helps on understanding variables and their reliability.
 
-<!--
-- Calcular precios de casas
-- Tengo mucha información, como el número de garajes, si tiene piscina y juraría que hasta si tiene chimenea
-- Problema:
-  - muchos NAs que imputar -> imputar con criterio
-  - Muchas categorías -> PCA
-  - Muchos casos -> particionar
-- Medimos en Kaggle el rendimiento para comparar
--->
 ---
 
 ## 📂 Dataset
@@ -19,58 +10,46 @@ The dataset belongs to [this Kaggle competition](https://www.kaggle.com/c/house-
 - 🏡**House measurements** (e.g., garage area, distance from the door to the street).
 - ✨**Quality** (e.g., fireplace quality, garage quality).
 - 🧰**Technical information** (e.g., access to gas, type of heating).
-- 💰**Sale information** (e.g., year sold, sal type).
+- 💰**Sale information** (e.g., year sold, sale type).
 
-<!--
 Data preprocessing involves:
-- Tokenization
-- Lemmatization
-- Stop-word removal
+- NAs Imputation.
+- Outliers detection.
+- Correlation and PCA to reduce dimensionality.
+- One-Hot Encoding.
+- Standarization.
 
 ---
-
 ## 🎯 Objective
 
-To classify user input into predefined intent categories with high accuracy. Key goals include:
-- Building and evaluating **machine learning models** for classification.
-- Analyzing the impact of **text preprocessing** techniques on performance.
-- Comparing the results of various **algorithms** like SVM, Naive Bayes, and Neural Networks.
+To predict the sales price for each house, while minimizing the Root-Mean-Squared-Error (RMSE). Key goals include:
+- Building and evaluating **advanced regression** techniques like random forest and gradient boosting.
+- Performing **feature engineering** to improve models performance.
+- Working with **PySpark** to work with partitioned data.
 
 ---
 
 ## ⚙️ Approach
 
 ### 🔄 Data Preparation
-1. **Preprocessing Steps:**
-   - Removed noise, punctuation, and stop-words.
-   - Applied stemming/lemmatization for word normalization.
+1. **Data Preprocessing Steps:**
+   - Loaded and cleaned the dataset to remove missing values and inconsistencies.
+   - Performed exploratory data analysis (EDA) to identify outliers.
+   - Standarized numerical data and normalized features for consistent scaling.
 
-2. **Feature Extraction:**
-   - Used **TF-IDF vectors** to represent text numerically.
-   - Experimented with **word embeddings** for semantic representation.
-
+2. **Feature Engineering:**
+   - Extracted relevant features for analysis and modeling.
+   - Applied transformations such as one-hot encoding.
+     
 ### 🛠️ Models
-- **Baseline Model:** Random classifier.
-- Naive Bayes classifier with bag-of-words.
-- **Models to compare:**
-  - TF-IDF Classifier.  
-  - Naive Bayes Classifier.
- 
+- **Linear models:** linear regression, generalized linear model (GLM).
+- **Tree Regression Models:** decission tree, random forest, gradient boosted trees.
+
 ---
 
 ## 🌟 Results
 
-### Performance Insights
-- **Baseline Model (Random Classifier):** As it was expected, increasing the number of categories decreases it's accuracy.
-- **TF-IDF Classifier:** Reached a decent accuracy, although it requires a long time to train.
-- ⭐ **Naive Bayes:** Best accuracy of the three with a short training time.
+Using a GLM, it was possible to achieve the following results on Kaggle:
+<img src="entrega_kaggle.png" width="800px">
 
----
-
-## 🔮 Future Improvements
-
-- **Expanded Dataset:** Incorporate more diverse and multilingual queries.
-- **Context Awareness:** Leverage sequence models like LSTMs or Transformers.
-- **Real-Time Deployment:** Implement in a live environment for continuous learning and feedback.
--->
 
